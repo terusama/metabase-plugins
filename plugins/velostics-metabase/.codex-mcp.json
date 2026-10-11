@@ -2,7 +2,8 @@
   "mcpServers": {
     "metabase": {
       "oauth": {
-        "callbackUrl": "http://127.0.0.1/callback/er1w1HIwEqOn",
+        "callbackPort": 8978,
+        "callbackUrl": "http://127.0.0.1:8978/callback/er1w1HIwEqOn",
         "clientId": "YYof2fOzJJw8Ds711N4abZ2eZP0o1JhF"
       },
       "scopes": [

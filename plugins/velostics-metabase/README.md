@@ -6,12 +6,14 @@ Preview: this package connects to staging data and requires an invited staging a
 
 ## Install
 
-Download and extract the marketplace ZIP supplied by Velostics. Open a terminal in the extracted folder containing `.claude-plugin` and `.agents`.
+Add the public marketplace, then install the plugin:
 
 | Client | Add the marketplace | Install the plugin |
 | --- | --- | --- |
-| Claude Code | `claude plugin marketplace add .` | `claude plugin install velostics-metabase@velostics-metabase` |
-| Codex | `codex plugin marketplace add .` | `codex plugin add velostics-metabase@velostics-metabase` |
+| Claude Code | `claude plugin marketplace add terusama/metabase-plugins` | `claude plugin install velostics-metabase@velostics-metabase` |
+| Codex | `codex plugin marketplace add https://github.com/terusama/metabase-plugins.git` | `codex plugin add velostics-metabase@velostics-metabase` |
+
+Alternatively, download and extract the marketplace ZIP from the repository's releases. Open a terminal in its extracted folder and replace the marketplace address above with `.`.
 
 Start a new conversation after installation. Ask: **"Help me connect Velostics Metabase."** The bundled setup skill explains how to sign in.
 
@@ -38,4 +40,4 @@ Your client sends analytics questions to the hosted gateway. The gateway verifie
 
 ## Compatibility and release status
 
-The bundle targets Claude Code and Codex clients that support plugin marketplaces and remote OAuth MCP connections. Claude Desktop and public directory approval are separate distribution paths. Packaging and installation do not establish completed browser sign-in; the publisher must verify that flow before a production release.
+Browser sign-in, authorized queries, and denial of another tenant's table were verified in staging with Claude Code 2.1.296 and Codex 0.162.1 on October 11, 2026. Claude Desktop and public directory approval are separate distribution paths.
