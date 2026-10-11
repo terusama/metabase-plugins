@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "metabase": {
+      "oauth": {
+        "callbackUrl": "http://127.0.0.1/callback/er1w1HIwEqOn",
+        "clientId": "YYof2fOzJJw8Ds711N4abZ2eZP0o1JhF"
+      },
+      "scopes": [
+        "analytics:read"
+      ],
+      "type": "http",
+      "url": "https://m6xuuq5lw7jm33kf5wgwaoz2c4.apigateway.us-chicago-1.oci.customer-oci.com/mcp"
+    }
+  }
+}

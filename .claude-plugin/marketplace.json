@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "description": "Connect your Velostics account to Metabase analytics."
+  },
+  "name": "velostics-metabase",
+  "owner": {
+    "name": "Velostics"
+  },
+  "plugins": [
+    {
+      "description": "Read your organization's Metabase analytics.",
+      "name": "velostics-metabase",
+      "source": "./plugins/velostics-metabase",
+      "version": "0.1.0-preview.1"
+    }
+  ]
+}

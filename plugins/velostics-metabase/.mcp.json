@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "metabase": {
+      "oauth": {
+        "authServerMetadataUrl": "https://login.velostics.com/.well-known/openid-configuration",
+        "callbackPort": 8979,
+        "clientId": "YYof2fOzJJw8Ds711N4abZ2eZP0o1JhF",
+        "scopes": "analytics:read"
+      },
+      "type": "http",
+      "url": "https://m6xuuq5lw7jm33kf5wgwaoz2c4.apigateway.us-chicago-1.oci.customer-oci.com/mcp"
+    }
+  }
+}

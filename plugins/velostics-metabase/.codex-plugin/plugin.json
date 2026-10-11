@@ -1,0 +1,22 @@
+{
+  "author": {
+    "name": "Velostics"
+  },
+  "description": "Sign in to query your organization's Metabase analytics.",
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/setup/SKILL.md"
+    }
+  },
+  "interface": {
+    "defaultPrompt": [
+      "Show me the analytics I can access."
+    ],
+    "displayName": "Velostics Metabase (Preview)",
+    "shortDescription": "Ask questions about your Metabase data"
+  },
+  "mcpServers": "./.codex-mcp.json",
+  "name": "velostics-metabase",
+  "skills": "./skills/",
+  "version": "0.1.0-preview.1"
+}

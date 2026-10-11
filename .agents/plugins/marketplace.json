@@ -1,0 +1,17 @@
+{
+  "name": "velostics-metabase",
+  "plugins": [
+    {
+      "category": "Productivity",
+      "name": "velostics-metabase",
+      "policy": {
+        "authentication": "ON_INSTALL",
+        "installation": "AVAILABLE"
+      },
+      "source": {
+        "path": "./plugins/velostics-metabase",
+        "source": "local"
+      }
+    }
+  ]
+}
