@@ -2,8 +2,8 @@
   "author": {
     "name": "Velostics"
   },
-  "description": "Sign in to query your organization's Metabase analytics.",
+  "description": "Connect your Velostics account. Read and update the Velostics records your account can access.",
   "mcpServers": "./.mcp.json",
   "name": "velostics-metabase",
-  "version": "0.1.0-preview.1"
+  "version": "0.2.0-preview.1"
 }

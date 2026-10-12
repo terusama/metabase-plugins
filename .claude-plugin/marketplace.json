@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "description": "Connect your Velostics account to Metabase analytics."
+    "description": "Velostics for Claude Code and Codex."
   },
   "name": "velostics-metabase",
   "owner": {
@@ -8,10 +8,10 @@
   },
   "plugins": [
     {
-      "description": "Read your organization's Metabase analytics.",
+      "description": "Connect your Velostics account to use your organization's records and data.",
       "name": "velostics-metabase",
       "source": "./plugins/velostics-metabase",
-      "version": "0.1.0-preview.1"
+      "version": "0.2.0-preview.1"
     }
   ]
 }

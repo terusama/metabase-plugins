@@ -1,6 +1,6 @@
 ---
 name: query
-description: Answer questions about a user's authorized Metabase tables and metrics through the Velostics Metabase plugin.
+description: Answer questions about a user's authorized tables and metrics through Velostics.
 ---
 
 Use the plugin's Metabase MCP tools to answer the user's analytics question.
