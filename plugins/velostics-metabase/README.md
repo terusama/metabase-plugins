@@ -18,8 +18,8 @@ Add the public marketplace, then install the plugin:
 
 | Client | Add the marketplace | Install the plugin |
 | --- | --- | --- |
-| Claude Code | `claude plugin marketplace add terusama/metabase-plugins` | `claude plugin install velostics-metabase@velostics-metabase` |
-| Codex | `codex plugin marketplace add https://github.com/terusama/metabase-plugins.git` | `codex plugin add velostics-metabase@velostics-metabase` |
+| Claude Code | `claude plugin marketplace add terusama/velostics-plugins` | `claude plugin install velostics-metabase@velostics-metabase` |
+| Codex | `codex plugin marketplace add https://github.com/terusama/velostics-plugins.git` | `codex plugin add velostics-metabase@velostics-metabase` |
 
 Alternatively, download and extract the marketplace ZIP from the repository's releases. Open a terminal in its extracted folder and replace the marketplace address above with `.`.
 
