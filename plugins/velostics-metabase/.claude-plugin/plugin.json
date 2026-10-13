@@ -5,5 +5,5 @@
   "description": "Connect your Velostics account. Read and update the Velostics records your account can access.",
   "mcpServers": "./.mcp.json",
   "name": "velostics-metabase",
-  "version": "0.2.0-preview.2"
+  "version": "0.2.0-preview.3"
 }
