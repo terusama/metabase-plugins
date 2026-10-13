@@ -1,10 +1,18 @@
-# Connect Velostics Metabase
+# Connect Velostics
 
-Ask Claude Code or Codex questions about the Metabase data your organization has authorized you to access. You need an existing Velostics account with analytics access. No API key, local server, or velOS installation is required.
+Use your Velostics account in Claude Code or Codex to find records, query data, and make the changes you can make on the website.
 
-Preview: this package connects to staging data and requires an invited staging account. It is not a production analytics service.
+Preview: this package uses nonproduction data and requires an invited preview account. Use it only with nonproduction records.
 
-## Install
+## Connect and ask
+
+1. Ask your assistant: **"Connect Velostics."** It will check the connection and guide you to sign in if needed.
+2. Sign in with your Velostics account in the browser, then return to your conversation. An existing sign-in session can take you straight back.
+3. Ask: **"Show my Velostics profile"**, **"Find my upcoming appointments"**, or **"Show five recent analytics records."** To make a change, describe what you want changed.
+
+Sign-in happens on `login.velostics.com`; keep passwords out of the conversation. Your account needs website access for website operations and analytics access for Metabase queries. A permission denial means the account cannot perform that request.
+
+## Install once
 
 Add the public marketplace, then install the plugin:
 
@@ -15,29 +23,42 @@ Add the public marketplace, then install the plugin:
 
 Alternatively, download and extract the marketplace ZIP from the repository's releases. Open a terminal in its extracted folder and replace the marketplace address above with `.`.
 
-Start a new conversation after installation. Ask: **"Help me connect Velostics Metabase."** The bundled setup skill explains how to sign in.
+Start a new conversation after installation, then follow **Connect and ask** above. No API key, local server, or velOS installation is required.
 
-## Sign in and ask a question
+## Open sign-in yourself
 
-1. In Claude Code, open `/mcp` and select the plugin's Metabase connection. In Codex, run `codex mcp login metabase` in your terminal.
-2. Follow the sign-in action to open your browser. Use your existing Velostics account on the Velostics sign-in page.
-3. Complete the browser flow and return to your conversation.
-4. Ask: **"Show me the analytics I can access."**
+| Client | Start sign-in |
+| --- | --- |
+| Claude Code | Open `/mcp`, select this plugin's **Metabase** connection, and choose its sign-in action. |
+| Codex | Run `codex mcp login metabase` in your terminal. |
 
-After connecting, try **"Show me five recent records"** or **"Summarize the available shipment data."** The agent discovers the tables and fields available to your account before querying. If you see an access error, ask your organization's administrator to enable analytics for your account.
+The browser page names the client you should return to. The connection retains the name **Metabase** so existing installations keep working. Never paste a password, access token, or Metabase API key into the conversation.
 
-Sign-in happens in your browser. Never paste a password, access token, or Metabase API key into the conversation. The plugin requests analytics read access and does not provide SQL execution or data editing.
+The plugin requests website API access and analytics read access. The website still decides which records and changes your account can access. Analytics tools query Metabase and do not execute raw SQL or edit analytics data.
+
+## Website operations
+
+The assistant searches registered operations, inspects the selected operation, and sends a read or a change through your website permissions. It does not need a URL or a tenant credential from you.
+
+| Tool | Use |
+| --- | --- |
+| `velostics_api_search` | Find operations by resource, action, or method. |
+| `velostics_api_get_operation` | Inspect an operation's method, path parameters, and formats. |
+| `velostics_api_read` | Read a registered operation. |
+| `velostics_api_write` | Make the change you requested through a registered operation. |
+
+Reads and changes use separate tools. Ask for the exact change you want; the assistant should clarify an ambiguous target or action before writing. A change can send notifications or start work just as it does on the website. Do not automatically retry a change after a timeout.
 
 ## Recover a connection
 
-If the connection asks you to sign in again, repeat the sign-in step above. If your browser reports a callback mismatch, share that error with Velostics support; the publisher must register the client's callback URL. If the gateway is unavailable, retry the connection after a minute. Reinstalling the plugin does not grant additional data access.
+If asked to sign in again, use the sign-in action above. After upgrading, sign in again if website tools report a missing API permission. For an access error, ask your organization's administrator to check your account permissions. For a callback mismatch, share the error with Velostics support. If the service is unavailable, retry after a minute. Reinstalling does not grant additional record access.
 
 To remove the plugin, run `claude plugin uninstall velostics-metabase@velostics-metabase` or `codex plugin remove velostics-metabase@velostics-metabase` in your terminal.
 
 ## Data handling
 
-Your client sends analytics questions to the hosted gateway. The gateway verifies your identity and organization access before querying Metabase. Query results enter your agent conversation, where your Claude or Codex provider's data policies also apply. This archive contains public connection settings and instructions; it contains no user credentials or tenant data.
+Your client sends requests to the hosted gateway, which verifies your sign-in. Website calls go to Velostics with your user identity; Metabase queries resolve your organization's analytics access. Results enter your agent conversation, where your Claude or Codex provider's data policies also apply. This archive contains public connection settings and instructions; it contains no user credentials or tenant data.
 
 ## Compatibility and release status
 
-Browser sign-in, authorized queries, and denial of another tenant's table were verified in staging with Claude Code 2.1.296 and Codex 0.162.1 on October 11, 2026. Claude Desktop and public directory approval are separate distribution paths.
+This preview uses the test website and nonproduction analytics data. Claude Code and Codex are supported. Claude Desktop and public directory approval are separate distribution paths.

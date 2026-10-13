@@ -2,7 +2,7 @@
   "author": {
     "name": "Velostics"
   },
-  "description": "Sign in to query your organization's Metabase analytics.",
+  "description": "Connect your Velostics account. Read and update the Velostics records your account can access.",
   "extensions": {
     "com.openai": {
       "onboardingSkill": "./skills/setup/SKILL.md"
@@ -10,13 +10,13 @@
   },
   "interface": {
     "defaultPrompt": [
-      "Show me the analytics I can access."
+      "Connect Velostics and show me the data I can access."
     ],
-    "displayName": "Velostics Metabase (Preview)",
-    "shortDescription": "Ask questions about your Metabase data"
+    "displayName": "Velostics (Preview)",
+    "shortDescription": "Your Velostics work, in your conversation"
   },
   "mcpServers": "./.codex-mcp.json",
   "name": "velostics-metabase",
   "skills": "./skills/",
-  "version": "0.1.0-preview.1"
+  "version": "0.2.0-preview.2"
 }
