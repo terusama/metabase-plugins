@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "metabase": {
+    "velostics": {
       "oauth": {
         "callbackPort": 8978,
         "callbackUrl": "http://127.0.0.1:8978/callback/er1w1HIwEqOn",

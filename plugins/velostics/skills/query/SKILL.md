@@ -3,7 +3,7 @@ name: query
 description: Query Velostics analytics, discover organization data sources, and show recent analytics records. Use before selecting an analytics source.
 ---
 
-Use the plugin's Metabase MCP tools to answer the user's analytics question.
+Use the plugin's Velostics connection and analytics tools to answer the user's analytics question.
 
 1. Read the live tool schemas. Start `search` with short literal subject words from the user's question in `term_queries`, before trying `semantic_queries`. For a broad request for analytics records, start with the literal term `records`. Prefer the requested subject to a generic service label such as analytics.
 2. Inspect metadata with `get_table` or `get_metric`, including the database and source description, before choosing a source. Select the organization's data. Metabase's Sample Database, Examples, and sample-company datasets are demonstration data; query them only when the user explicitly requests samples. If only sample sources match, broaden the literal search or ask which organization source the user wants. Resolve filter values with `get_table_field_values` or `get_metric_field_values` when needed.
