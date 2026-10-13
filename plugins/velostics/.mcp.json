@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "metabase": {
+    "velostics": {
       "oauth": {
         "authServerMetadataUrl": "https://login.velostics.com/.well-known/openid-configuration",
         "callbackPort": 8979,

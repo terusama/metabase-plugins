@@ -16,7 +16,7 @@
     "shortDescription": "Your Velostics work, in your conversation"
   },
   "mcpServers": "./.codex-mcp.json",
-  "name": "velostics-metabase",
+  "name": "velostics",
   "skills": "./skills/",
-  "version": "0.2.0-preview.4"
+  "version": "0.2.0-preview.5"
 }

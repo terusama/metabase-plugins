@@ -18,21 +18,37 @@ Add the public marketplace, then install the plugin:
 
 | Client | Add the marketplace | Install the plugin |
 | --- | --- | --- |
-| Claude Code | `claude plugin marketplace add terusama/velostics-plugins` | `claude plugin install velostics-metabase@velostics-metabase` |
-| Codex | `codex plugin marketplace add https://github.com/terusama/velostics-plugins.git` | `codex plugin add velostics-metabase@velostics-metabase` |
+| Claude Code | `claude plugin marketplace add terusama/velostics-plugins` | `claude plugin install velostics@velostics` |
+| Codex | `codex plugin marketplace add https://github.com/terusama/velostics-plugins.git` | `codex plugin add velostics@velostics` |
 
 Alternatively, download and extract the marketplace ZIP from the repository's releases. Open a terminal in its extracted folder and replace the marketplace address above with `.`.
 
 Start a new conversation after installation, then follow **Connect and ask** above. No API key, local server, or velOS installation is required.
 
+## Replace an earlier preview
+
+If you installed `velostics-metabase`, replace it with the Velostics plugin:
+
+1. Remove the earlier plugin and its marketplace using the commands for your client:
+
+   | Client | Remove the earlier plugin | Remove the earlier marketplace |
+   | --- | --- | --- |
+   | Claude Code | `claude plugin uninstall velostics-metabase@velostics-metabase` | `claude plugin marketplace remove velostics-metabase` |
+   | Codex | `codex plugin remove velostics-metabase@velostics-metabase` | `codex plugin marketplace remove velostics-metabase` |
+
+2. Run the **Install once** commands above, then start a new conversation.
+3. Ask **"Connect Velostics"** and sign in once for the renamed connection. Your account permissions stay the same.
+
+Earlier preview packages keep their existing connections until you replace them.
+
 ## Open sign-in yourself
 
 | Client | Start sign-in |
 | --- | --- |
-| Claude Code | Open `/mcp`, select this plugin's **Metabase** connection, and choose its sign-in action. |
-| Codex | Run `codex mcp login metabase` in your terminal. |
+| Claude Code | Open `/mcp`, select this plugin's **Velostics** connection, and choose its sign-in action. |
+| Codex | Run `codex mcp login velostics` in your terminal. |
 
-The browser page names the client you should return to. The connection retains the name **Metabase** so existing installations keep working. Never paste a password, access token, or Metabase API key into the conversation.
+The browser page names the client you should return to. Never paste a password, access token, or Metabase API key into the conversation.
 
 The plugin requests website API access and analytics read access. The website still decides which records and changes your account can access. Analytics tools query Metabase and do not execute raw SQL or edit analytics data.
 
@@ -53,7 +69,7 @@ Reads and changes use separate tools. Ask for the exact change you want; the ass
 
 If asked to sign in again, use the sign-in action above. After upgrading, sign in again if website tools report a missing API permission. For an access error, ask your organization's administrator to check your account permissions. For a callback mismatch, share the error with Velostics support. If the service is unavailable, retry after a minute. Reinstalling does not grant additional record access.
 
-To remove the plugin, run `claude plugin uninstall velostics-metabase@velostics-metabase` or `codex plugin remove velostics-metabase@velostics-metabase` in your terminal.
+To remove the plugin, run `claude plugin uninstall velostics@velostics` or `codex plugin remove velostics@velostics` in your terminal.
 
 ## Data handling
 
