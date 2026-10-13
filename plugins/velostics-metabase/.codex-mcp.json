@@ -8,7 +8,8 @@
       },
       "scopes": [
         "analytics:read",
-        "velostics:api"
+        "velostics:api",
+        "offline_access"
       ],
       "type": "http",
       "url": "https://m6xuuq5lw7jm33kf5wgwaoz2c4.apigateway.us-chicago-1.oci.customer-oci.com/mcp"
