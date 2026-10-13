@@ -2,7 +2,7 @@
 
 Use your Velostics account in Claude Code or Codex to find records, query data, and make the changes you can make on the website.
 
-Preview: this package connects to staging data and requires an invited staging account. Use it only with staging records.
+Preview: this package uses nonproduction data and requires an invited preview account. Use it only with nonproduction records.
 
 ## Connect and ask
 
@@ -61,4 +61,4 @@ Your client sends requests to the hosted gateway, which verifies your sign-in. W
 
 ## Compatibility and release status
 
-The previous analytics preview was verified in staging with Claude Code 2.1.296 and Codex 0.162.1 on October 11, 2026. This API extension remains a staging preview. Claude Desktop and public directory approval are separate distribution paths.
+This preview uses the test website and nonproduction analytics data. Claude Code and Codex are supported. Claude Desktop and public directory approval are separate distribution paths.

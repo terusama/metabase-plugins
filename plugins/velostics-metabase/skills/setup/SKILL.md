@@ -12,4 +12,4 @@ Connect Velostics using the Metabase connection supplied by this plugin.
 
 For an access denial, explain that the account needs the corresponding website or analytics permission from its organization administrator. An older token may need a new browser sign-in after a plugin upgrade to request website API access. Do not change accounts or tenant identifiers to bypass a denial. For callback errors, report the browser's error and direct the user to the publisher for configuration repair. For service errors, give a short retry instruction; do not claim a successful connection until a tool call succeeds.
 
-Use the package's README for installation instructions. The connection settings in `connection.json` identify whether this is a preview or production deployment. Preview accounts access staging data.
+Use the package's README for installation instructions. The connection settings in `connection.json` identify whether this is a preview or production deployment. Preview accounts access nonproduction data.
