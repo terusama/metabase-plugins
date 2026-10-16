@@ -1,6 +1,20 @@
 {
   "mcpServers": {
-    "velostics": {
+    "velostics-staging": {
+      "oauth": {
+        "callbackPort": 8978,
+        "callbackUrl": "http://127.0.0.1:8978/callback/er1w1HIwEqOn",
+        "clientId": "YYof2fOzJJw8Ds711N4abZ2eZP0o1JhF"
+      },
+      "scopes": [
+        "analytics:read",
+        "velostics:api",
+        "offline_access"
+      ],
+      "type": "http",
+      "url": "https://a36q5i6i637n4vopgdxz54s3aa.apigateway.us-chicago-1.oci.customer-oci.com/mcp"
+    },
+    "velostics-test": {
       "oauth": {
         "callbackPort": 8978,
         "callbackUrl": "http://127.0.0.1:8978/callback/er1w1HIwEqOn",

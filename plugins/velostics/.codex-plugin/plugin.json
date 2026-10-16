@@ -18,5 +18,5 @@
   "mcpServers": "./.codex-mcp.json",
   "name": "velostics",
   "skills": "./skills/",
-  "version": "0.2.0-preview.5"
+  "version": "0.2.0-preview.6"
 }

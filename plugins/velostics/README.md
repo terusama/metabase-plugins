@@ -1,5 +1,14 @@
 # Connect Velostics
 
+Choose test or staging before reading or changing records. Sign in to each connection separately.
+
+| Environment | MCP connection | Codex sign-in |
+| --- | --- | --- |
+| Test | `velostics-test` | `codex mcp login velostics-test` |
+| Staging | `velostics-staging` | `codex mcp login velostics-staging` |
+
+In Claude Code, open `/mcp` and select the connection for the intended environment.
+
 Use your Velostics account in Claude Code or Codex to find records, query data, and make the changes you can make on the website.
 
 Preview: this package uses nonproduction data and requires an invited preview account. Use it only with nonproduction records.
@@ -45,8 +54,8 @@ Earlier preview packages keep their existing connections until you replace them.
 
 | Client | Start sign-in |
 | --- | --- |
-| Claude Code | Open `/mcp`, select this plugin's **Velostics** connection, and choose its sign-in action. |
-| Codex | Run `codex mcp login velostics` in your terminal. |
+| Claude Code | Open `/mcp`, select the selected **velostics-test** or **velostics-staging** connection, and choose its sign-in action. |
+| Codex | Run `codex mcp login <connection>` in your terminal. |
 
 The browser page names the client you should return to. Never paste a password, access token, or Metabase API key into the conversation.
 
@@ -77,4 +86,4 @@ Your client sends requests to the hosted gateway, which verifies your sign-in. W
 
 ## Compatibility and release status
 
-This preview uses the test website and nonproduction analytics data. Claude Code and Codex are supported. Claude Desktop and public directory approval are separate distribution paths.
+This preview uses the test and staging websites and nonproduction analytics data. Claude Code and Codex are supported. Claude Desktop and public directory approval are separate distribution paths.
