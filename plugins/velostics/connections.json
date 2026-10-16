@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "claudeCallbackPort": 8979,
+    "clientId": "YYof2fOzJJw8Ds711N4abZ2eZP0o1JhF",
+    "codexCallbackUrl": "http://127.0.0.1:8978/callback/er1w1HIwEqOn",
+    "environment": "preview",
+    "issuer": "https://login.velostics.com/",
+    "url": "https://a36q5i6i637n4vopgdxz54s3aa.apigateway.us-chicago-1.oci.customer-oci.com/mcp",
+    "version": "0.2.0-preview.6"
+  },
+  "test": {
+    "claudeCallbackPort": 8979,
+    "clientId": "YYof2fOzJJw8Ds711N4abZ2eZP0o1JhF",
+    "codexCallbackUrl": "http://127.0.0.1:8978/callback/er1w1HIwEqOn",
+    "environment": "preview",
+    "issuer": "https://login.velostics.com/",
+    "url": "https://m6xuuq5lw7jm33kf5wgwaoz2c4.apigateway.us-chicago-1.oci.customer-oci.com/mcp",
+    "version": "0.2.0-preview.6"
+  }
+}
